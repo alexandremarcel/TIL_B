@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 13 nov. 2017 à 15:51
+-- Généré le :  jeu. 16 nov. 2017 à 09:02
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -64,8 +64,19 @@ CREATE TABLE IF NOT EXISTS `page_tacos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
   `description` varchar(1000) NOT NULL,
+  `horaires` varchar(1000) DEFAULT NULL,
+  `telephone` varchar(10) DEFAULT NULL,
+  `adresse` varchar(100) NOT NULL,
+  `codePostal` varchar(5) NOT NULL,
+  `ville` varchar(30) NOT NULL,
+  `lienLogo` varchar(100) DEFAULT NULL,
+  `wifi` tinyint(1) NOT NULL,
+  `livraison` tinyint(1) NOT NULL,
+  `reservationEnLigne` tinyint(1) NOT NULL,
+  `lienReservation` varchar(50) DEFAULT NULL,
+  `tv` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -78,12 +89,12 @@ CREATE TABLE IF NOT EXISTS `tacos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(30) NOT NULL,
   `ingrédients` varchar(1000) NOT NULL,
-  `prix` int(11) NOT NULL,
+  `prix` float NOT NULL,
   `lienImage` varchar(50) NOT NULL,
   `idPageTacos` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_foreign_idPageTacos` (`idPageTacos`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
