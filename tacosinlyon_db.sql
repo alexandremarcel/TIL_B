@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 16 nov. 2017 à 09:02
+-- Généré le :  lun. 20 nov. 2017 à 13:05
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `notation` (
   `idPageTacos` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_foreign_idPageTacos` (`idPageTacos`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `page_tacos` (
   `lienReservation` varchar(50) DEFAULT NULL,
   `tv` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `tacos` (
   `idPageTacos` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_foreign_idPageTacos` (`idPageTacos`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
